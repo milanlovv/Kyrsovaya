@@ -1,0 +1,38 @@
+﻿<Window x:Class="TheMostImportantProject.Zay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TheMostImportantProject"
+        mc:Ignorable="d"
+         Title="Сотрудники" Height="1080" Width="1920">
+    <Viewbox >
+        <StackPanel Height="1080" VerticalAlignment="Top" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="50 5 0 5" Content="Агентство" FontWeight="Bold" Style="{StaticResource ResourceKey=labelHeader}"></Label>
+                <Label Margin="50 0 0 0" VerticalAlignment="Center" Content="Заявки" Name="ToEmplo" Style="{StaticResource ResourceKey=labelHeader}" ></Label>
+                <Label Margin="30 0 0 0" VerticalAlignment="Center" Content="Услуги" Name="ToMenu" Style="{StaticResource ResourceKey=labelHeader}" MouseUp="ToMenu_MouseUp"></Label>
+            </StackPanel>
+            <Line></Line>
+            <StackPanel Orientation="Horizontal" Margin="163 85 230 75">
+                <Label Content="Заявки" FontSize="64"></Label>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="163 0 0 75">
+                <ListView Foreground="Black" FontSize="24" Name="dgEmp"  Width="1400" HorizontalAlignment="Left" d:ItemsSource="{d:SampleData ItemCount=15}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn x:Name="ID" DisplayMemberBinding="{Binding Path=Zayavka_Id}">Id</GridViewColumn>
+                            <GridViewColumn x:Name="Name" DisplayMemberBinding="{Binding Path=Name}" Width="200">Имя</GridViewColumn>
+
+                            <GridViewColumn x:Name="PhoneNumber" DisplayMemberBinding="{Binding Path=Number}" Width="250">Номер телефона</GridViewColumn>
+                            <GridViewColumn x:Name="Date" DisplayMemberBinding="{Binding Path=Time}" Width="250">Дата</GridViewColumn>
+              
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Button Background="#FFFF00C7" Margin="60 0 0 0" Width="200" Height="60" FontSize="24" Click="ButtonDelete_Click">Удалить</Button>
+            </StackPanel>
+        </StackPanel>
+    </Viewbox>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="App8.Uslugi"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App8"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#FFF2D1F4">
+
+    <Grid>
+
+
+        <CommandBar Background="#FFC71583" Foreground="White" HorizontalAlignment="Center">
+            
+            <AppBarButton x:Name="ZayavkiButton" Label="Главная" Icon="Home" Click="ZayavkiButton_Click"/>
+            <AppBarButton  Label="Услуги" Icon="Repair" />
+        </CommandBar>
+        <TextBlock Text="Услуги" FontSize="32" FontWeight="Bold" Margin="20,50,20,20" Foreground="#FFC71583" TextAlignment="Center"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="30,90,30,0">
+            <TextBlock Text="#" FontWeight="SemiBold" Foreground="#FFC71583"/>
+            <TextBlock Text="Изображение" FontWeight="SemiBold" Foreground="#FFC71583" Margin="30,0,0,0"/>
+            <TextBlock Text="Имя" FontWeight="SemiBold" Foreground="#FFC71583" Margin="60,0,0,0"/>
+            <TextBlock Text="Цена" FontWeight="SemiBold" Foreground="#FFC71583" Margin="60,0,0,0"/>
+        </StackPanel>
+
+        <ListView Name="UslugiListView" Margin="20,120,20,20" Background="#FFEEF5FF" HorizontalContentAlignment="Stretch">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Background="#FFC71583" Margin="10">
+                        <TextBlock Text="{Binding Index}" Margin="10" Foreground="White"/>
+                        <Image Source="{Binding Image}" Width="50" Height="50" Margin="10"/>
+                        <TextBlock Text="{Binding Name}" Margin="10" FontWeight="SemiBold" Foreground="White"/>
+                        <TextBlock Text="{Binding Price}" Margin="10" FontWeight="SemiBold" Foreground="White"/>
+                        <Button Content="Купить" Click="BuyButton_Click" Margin="10" Background="#FFC71583" Foreground="White" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
