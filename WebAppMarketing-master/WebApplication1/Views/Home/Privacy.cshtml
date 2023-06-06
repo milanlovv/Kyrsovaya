@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form id="TaskFirstSolution" method="post">
+    <p>
+        <label>Первый катет треугольника:</label>
+        <input type="text" name="FirstCatet" />
+    </p>
+    <p>
+        <label>Второй катет треугольника:</label>
+        <input type="text" name="SecondCatet" />
+    </p>
+    <p>
+        <input type="submit" value="Вычислить" />
+    </p>
+    <p>
+        <label>Гипотенуза:</label>
+        <label>@ViewBag.H</label>
+    </p>
+</form>

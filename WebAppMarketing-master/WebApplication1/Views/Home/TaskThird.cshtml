@@ -1,0 +1,82 @@
+﻿@model WebApplication1.Repository.Models.Client
+
+
+@{
+    ViewData["Title"] = "Оставить заявку";
+}
+
+<div id="wrapper">
+	<div class="container">
+
+		<!-- start: Contact Info -->
+		<div class="span6">
+			<div class="title"><h3>Контакты</h3></div>
+			<p>
+				<b>Акцент на результат</b>
+			</p>
+			<p>
+				Пн-Пт: 9:00-19:00
+			</p>
+			<p>
+				ул. Мухамедьярова 31А, 3 этаж, оф. 301-305
+			</p>
+			<p>
+				8 843 207-11-58
+			</p>
+			<p>
+				my@aaccent.ru
+			</p>
+			<p>
+			</p>
+			<p>
+				Оставьте заявку на бесплатную консультацию!
+			</p>
+		</div>
+		<!-- end: Contact Info -->
+		<!-- start: Contact Form -->
+		<div class="span4">
+			<div class="title"><h3>Оставить заявку</h3></div>
+
+			<!-- start: Contact Form -->
+@*			<div id="contact-form">*@
+
+@*				<form method="post" name="contactForm" id="contactForm">
+					<fieldset>
+						<div class="group"><input name="contactName" type="text" id="contactName" placeholder="Имя" value="" minLength="2" required /></div>
+						<div><input name="contactNumber" type="text" id="contactNumber" placeholder="Телефон" value="" minLength="2" required /></div>
+						<div><input name="contactPassword" type="password" id="contactPassword" placeholder="Пароль" value="" minLength="6" required /></div>
+						<div><input name="contactPassword2" type="password" id="contactPassword2" placeholder="Повторите пароль" value="" minLength="6" required /></div>
+						
+					</fieldset>
+				</form> <!-- Form End -->*@
+
+			<div id="contact-form">
+
+				<form method="post" name="contactForm" id="contactForm">
+					<fieldset>
+						<div class="group"><input name="contactName" type="text" id="contactName" placeholder="Имя" value="" minLength="2" required /></div>
+						<div><input name="contactNumber" type="text" id="contactNumber" placeholder="Телефон" value="" minLength="2" required /></div>
+						<div class="group"><input name="Password" type="text" id="Password" placeholder="Пароль" value="" minLength="2" required /></div>
+						<input type="submit" value="Отправить" />
+					</fieldset>
+				</form> <!-- Form End -->
+			</div>
+
+			
+			<!-- end: Contact Form -->
+
+		</div>
+			<!-- end: Contact Form -->
+			
+		<div>
+			<img src="~/img/map.png">
+		</div>
+		</div>
+		
+	</div>
+	<link href="~/css/bootstrap.css" rel="stylesheet">
+	<link href="~/css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,80">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
